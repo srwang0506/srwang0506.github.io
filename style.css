@@ -196,9 +196,8 @@ body {
 /* ===== MAIN CONTENT ===== */
 #main-content {
   margin-left: var(--sidebar-width);
-  flex: 1;
+  width: 1120px;
   padding: 4rem 5rem;
-  max-width: calc(100vw - var(--sidebar-width));
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -492,12 +491,26 @@ body {
 /* Responsive */
 @media (max-width: 1400px) {
   :root { --sidebar-width: 420px; }
-  #main-content { padding: 3.5rem 4rem; }
+  #main-content {
+  margin-left: var(--sidebar-width);
+  width: 1120px;
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 }
 @media (max-width: 1200px) {
   :root { --sidebar-width: 380px; }
   html { font-size: 10pt; }
-  #main-content { padding: 3rem; }
+  #main-content {
+  margin-left: var(--sidebar-width);
+  width: 1120px;
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
   .pub-image { width: 150px; min-width: 150px; height: 100px; }
 }
 @media (max-width: 900px) {
@@ -515,7 +528,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
   #sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border-color); }
-  #main-content { margin-left: 0; padding: 2rem; max-width: 100%; }
+  #main-content {
+  margin-left: var(--sidebar-width);
+  width: 1120px;
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
   #homeName { font-size: 2rem; }
   .avatar-container { width: 150px; height: 150px; }
   html { font-size: 16px; }
@@ -530,6 +550,7 @@ body {
 .auth-sym { font-size: 0.8em; vertical-align: super; margin-left: 2px; }
 .auth-sym.star { color: var(--primary); }
 .auth-sym.dagger { color: var(--accent); }
+
 
 
 
