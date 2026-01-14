@@ -1,4 +1,4 @@
-﻿import "./style.css";
+import "./style.css";
 import { homepageData } from "./data/homepage.js";
 import { newsData } from "./data/news.js";
 import { publicationData } from "./data/publications.js";
