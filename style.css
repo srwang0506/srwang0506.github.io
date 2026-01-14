@@ -51,7 +51,7 @@
 
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 2rem; font-size: 10pt; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; font-size: 10pt; width: 1600px; min-width: 1600px; overflow-x: auto; }
 body {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -489,5 +489,6 @@ body {
 }
 
 /* Responsive */
+
 
 
