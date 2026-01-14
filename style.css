@@ -51,7 +51,7 @@
 
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 2rem; font-size: 12pt; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; font-size: 10pt; }
 body {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -481,7 +481,7 @@ body {
 }
 @media (max-width: 1200px) {
   :root { --sidebar-width: 380px; }
-  html { font-size: 12pt; }
+  html { font-size: 10pt; }
   #main-content { padding: 3rem; }
   .pub-image { width: 150px; min-width: 150px; height: 100px; }
 }
@@ -503,5 +503,6 @@ body {
 .auth-sym { font-size: 0.8em; vertical-align: super; margin-left: 2px; }
 .auth-sym.star { color: var(--primary); }
 .auth-sym.dagger { color: var(--accent); }
+
 
 
