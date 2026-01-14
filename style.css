@@ -51,7 +51,7 @@
 
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 2rem; font-size: 10pt; width: 1600px; min-width: 1600px; overflow-x: auto; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; font-size: 9px; width: 1600px; min-width: 1600px; overflow-x: auto; }
 body {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -196,7 +196,7 @@ body {
 /* ===== MAIN CONTENT ===== */
 #main-content {
   margin-left: var(--sidebar-width);
-  width: 1120px;
+  width: 1220px;
   padding: 4rem 5rem;
   display: flex;
   flex-direction: column;
@@ -489,6 +489,8 @@ body {
 }
 
 /* Responsive */
+
+
 
 
 
