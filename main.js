@@ -1,14 +1,4 @@
 ﻿import "./style.css";
-
-// Force consistent zoom across all devices
-function setFixedZoom() {
-  const targetWidth = 1600;
-  const actualWidth = window.innerWidth;
-  const zoom = actualWidth / targetWidth;
-  document.body.style.zoom = zoom;
-}
-setFixedZoom();
-window.addEventListener("resize", setFixedZoom);
 import { homepageData } from "./data/homepage.js";
 import { newsData } from "./data/news.js";
 import { publicationData } from "./data/publications.js";
