@@ -51,7 +51,7 @@
 
 /* ===== RESET ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 2rem; font-size: 20px; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; font-size: 18px; }
 body {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -503,3 +503,4 @@ body {
 .auth-sym { font-size: 0.8em; vertical-align: super; margin-left: 2px; }
 .auth-sym.star { color: var(--primary); }
 .auth-sym.dagger { color: var(--accent); }
+
