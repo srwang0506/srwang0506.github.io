@@ -1,4 +1,4 @@
-﻿/* ===== VARIABLES ===== */
+/* ===== VARIABLES ===== */
 :root {
   --primary: #3b82f6;
   --primary-light: #60a5fa;
@@ -358,6 +358,30 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
 }
 .pub-links a:hover, .pill-link:hover { background: var(--primary); color: white; border-color: var(--primary); }
 
+/* Publications Legend */
+.pub-legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.legend-sym {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.legend-sym.dagger {
+  color: var(--primary);
+}
+.legend-sym.star {
+  color: var(--accent);
+}
+
 /* Honors */
 .honor-row {
   display: flex;
@@ -467,6 +491,8 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
 }
 
 /* Responsive */
+
+
 
 
 
