@@ -276,10 +276,33 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
   font-size: 1.05rem;
 }
 .news-body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); background: var(--bg-main); line-height: 1.8; display: flex; min-height: 100vh;
+  flex: 1;
+}
+.news-title {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+.news-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+.news-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
-.news-body a { color: var(--primary); text-decoration: none; }
-.news-body a:hover { text-decoration: underline; }
+.news-text a { color: var(--primary); text-decoration: none; }
+.news-text a:hover { text-decoration: underline; }
 
 /* Publications with Image */
 .pub-item {
