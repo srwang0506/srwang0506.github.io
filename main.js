@@ -94,6 +94,7 @@ function init() {
     return "<div class=\"misc-item\"><div class=\"misc-category\">" + item.category + "</div><h4 class=\"misc-title\">" + item.title + "</h4><div class=\"misc-desc\">" + item.desc + "</div></div>";
   }).join("");
   
+  renderPubs(publicationData);
   initTheme();
   initNavigation();
 }
