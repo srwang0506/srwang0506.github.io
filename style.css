@@ -416,24 +416,55 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
 
 /* Timeline (Education & Experience) */
 .cv-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 120px 1fr;
   gap: 2rem;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
   transition: all 0.25s;
 }
-.cv-item:hover { border-color: var(--primary-light); box-shadow: var(--shadow-sm); }
-.cv-date { min-width: 130px; color: var(--text-light); font-family: var(--font-mono); font-size: 1.1rem; flex-shrink: 0; }
+.cv-item:last-child {
+  border-bottom: none;
+}
+.cv-item:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.cv-date {
+  color: var(--text-light);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
 .cv-main { flex: 1; }
-.cv-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-main); }
-.cv-sub { color: var(--text-muted); font-size: 1.15rem; font-style: italic; margin-bottom: 0.85rem; }
-.cv-desc { font-size: 1.15rem; color: var(--text-muted); }
-.cv-desc div { margin-bottom: 0.4rem; padding-left: 1.25rem; position: relative; }
-.cv-desc div::before { content: ""; position: absolute; left: 0; color: var(--primary); }
-
+.cv-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--text-main);
+}
+.cv-sub {
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.cv-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.cv-desc div {
+  margin-bottom: 0.3rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.cv-desc div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
 /* Misc Section */
 .misc-item {
   padding: 2rem;
