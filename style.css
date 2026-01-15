@@ -416,54 +416,54 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
 
 /* Timeline (Education & Experience) */
 .cv-item {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 2rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border-color);
-  transition: all 0.25s;
-}
-.cv-item:last-child {
-  border-bottom: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 0.8rem;
+  background: var(--card-bg);
+  border-left: 3px solid var(--primary);
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 .cv-item:hover {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  box-shadow: var(--shadow-sm);
+  transform: translateX(4px);
 }
 .cv-date {
   color: var(--text-light);
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 0.9rem;
+  min-width: 120px;
   flex-shrink: 0;
 }
 .cv-main { flex: 1; }
 .cv-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
   color: var(--text-main);
 }
 .cv-sub {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-style: italic;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 .cv-desc {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 .cv-desc div {
-  margin-bottom: 0.3rem;
-  padding-left: 1.2rem;
+  margin-bottom: 0.2rem;
+  padding-left: 1rem;
   position: relative;
 }
 .cv-desc div::before {
   content: "";
   position: absolute;
   left: 0;
-  color: var(--primary);
+  color: var(--primary-light);
 }
 /* Misc Section */
 .misc-item {
