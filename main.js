@@ -71,11 +71,9 @@ function init() {
   Q("#homeInterests").innerHTML = (homepageData.interests || []).map(function(i) { return "<span class=\"interest-tag\">" + i + "</span>"; }).join("");
 
   Q("#newsList").innerHTML = newsData.map(function(item) {
-    var tag = item.tag ? "<span class=\"news-tag\">" + item.tag + "</span>" : "";
-    var title = item.title ? "<div class=\"news-title\">" + item.title + tag + "</div>" : "";
-    return "<div class=\"news-item\"><div class=\"news-date\">" + item.date + "</div><div class=\"news-body\">" + title + "<div class=\"news-text\">" + item.body + "</div></div></div>";
+    var title = item.title ? item.title : "";
+    return "<div class=\"news-item\"><div class=\"news-header\"><span class=\"news-date\">" + item.date + "</span><span class=\"news-title\">" + title + "</span></div><div class=\"news-text\">" + item.body + "</div></div>";
   }).join("");
-  renderPubs(publicationData);
 
   Q("#honorsList").innerHTML = honorsData.map(function(item) {
     return "<div class=\"honor-row\"><span class=\"honor-date\">" + item.date + "</span><span class=\"honor-title\">" + item.title + "</span></div>";
