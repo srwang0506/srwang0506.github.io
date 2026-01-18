@@ -15,6 +15,11 @@
     desc: "Contributed to the AAAI 2026 conference as a program committee member, reviewing and evaluating submitted papers in the field of artificial intelligence."
   },
   {
+    category: "Teaching",
+    title: "Teaching Assistant (TA), Beijing Jiaotong University",
+    desc: "Served as a teaching assistant for Calculus (2024–2025 Fall), Java Programming and University Physics (2024–2025 Spring), and Discrete Mathematics and Probability & Mathematical Statistics (2025–2026 Fall)."
+  },
+  {
     category: "Student Work",
     title: "President, Academic Support Center (ASC), Beijing Jiaotong University",
     desc: "Led the Academic Support Center, coordinating academic support and development-related tasks, organizing events and activities to enhance student learning and academic growth."
