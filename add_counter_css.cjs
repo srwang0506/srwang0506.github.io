@@ -2,12 +2,10 @@
 const content = fs.readFileSync('style.css', 'utf-8');
 const lines = content.split(/\r?\n/);
 
-// 找到 footer 部分的最后，在文件末尾之前添加新样式
 let insertIndex = lines.length - 1;
 for (let i = lines.length - 1; i >= 0; i--) {
   if (lines[i].includes('.footer-tagline')) {
     insertIndex = i;
-    // 找到这个规则的结束
     for (let j = i + 1; j < lines.length; j++) {
       if (lines[j].includes('}') && !lines[j].includes('{')) {
         insertIndex = j + 1;
