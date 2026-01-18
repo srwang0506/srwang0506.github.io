@@ -563,6 +563,35 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
   font-style: italic;
   letter-spacing: 0.02em;
 }
+.footer-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+}
+.stat-item i {
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+.stat-item span {
+  font-weight: 600;
+  color: var(--text-main);
+}
+.stat-divider {
+  color: var(--text-light);
+  opacity: 0.5;
+}
 
 /* Responsive */
 
