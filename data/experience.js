@@ -4,6 +4,7 @@
     title: "<a href='https://mvig-rhos.com/'>RHOS Lab</a>, SAI, SJTU",
     sub: "Research Intern",
     desc: [
+      "Supervisor: <a href=\"https://dirtyharrylyl.github.io/\">Prof. Yong-Lu Li</a>.",
       "Research on human-object interaction (HOI) and 3D reconstruction."
     ]
   }
