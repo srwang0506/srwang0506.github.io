@@ -137,13 +137,23 @@ function initNavigation() {
 }
 
 function renderPubs(pubs) {
+  // Icon map for link types
+  var linkIcons = {
+    arxiv: "<svg class=\"pill-icon\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M4.5 2A2.5 2.5 0 0 0 2 4.5v15A2.5 2.5 0 0 0 4.5 22h15a2.5 2.5 0 0 0 2.5-2.5v-15A2.5 2.5 0 0 0 19.5 2h-15ZM6 17l3.2-4.8L6 7.5h2l2.1 3.1L12.2 7.5h2L11 12.2 14.2 17h-2l-2.2-3.3L7.9 17H6Z\"/></svg>",
+    code: "<i class=\"fab fa-github pill-icon-fa\"></i>",
+    poster: "<i class=\"fas fa-easel pill-icon-fa\"></i>"
+  };
+
   Q("#pubList").innerHTML = pubs.map(function(pub) {
     var linksHtml = pub.links
       ? Object.entries(pub.links).map(function(entry) {
-          if (entry[0] === "poster") {
-            return "<a href=\"javascript:void(0)\" class=\"pill-link poster-link\" data-poster=\"" + entry[1] + "\"><i class=\"fas fa-image\" style=\"margin-right:4px;font-size:0.85em\"></i>" + entry[0] + "</a>";
+          var key = entry[0];
+          var url = entry[1];
+          var icon = linkIcons[key] || "";
+          if (key === "poster") {
+            return "<a href=\"javascript:void(0)\" class=\"pill-link poster-link\" data-poster=\"" + url + "\">" + icon + key + "</a>";
           }
-          return "<a href=\"" + entry[1] + "\" class=\"pill-link\" target=\"_blank\">" + entry[0] + "</a>";
+          return "<a href=\"" + url + "\" class=\"pill-link\" target=\"_blank\">" + icon + key + "</a>";
         }).join("")
       : "";
     
@@ -173,11 +183,13 @@ function createPosterModal() {
   modal.innerHTML =
     "<div class=\"poster-overlay\"></div>" +
     "<div class=\"poster-container\">" +
-      "<button class=\"poster-close\" aria-label=\"Close\">" +
-        "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\">" +
-          "<path d=\"M12 4L4 12M4 4l8 8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>" +
-        "</svg>" +
-      "</button>" +
+      "<div class=\"poster-header\">" +
+        "<button class=\"poster-close\" aria-label=\"Close\">" +
+          "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\">" +
+            "<path d=\"M11 3L3 11M3 3l8 8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>" +
+          "</svg>" +
+        "</button>" +
+      "</div>" +
       "<div class=\"poster-body\">" +
         "<iframe id=\"posterFrame\" class=\"poster-frame\"></iframe>" +
       "</div>" +
@@ -197,7 +209,7 @@ function openPosterPreview(src) {
   createPosterModal();
   var modal = Q("#posterModal");
   var frame = Q("#posterFrame");
-  frame.src = src;
+  frame.src = src + "#page=1&view=FitH";
   // Trigger reflow then add active class for animation
   modal.style.display = "flex";
   requestAnimationFrame(function() {
@@ -220,5 +232,3 @@ function closePosterPreview() {
 }
 
 init();
-
-
