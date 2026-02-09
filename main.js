@@ -139,9 +139,9 @@ function initNavigation() {
 function renderPubs(pubs) {
   // Icon map for link types
   var linkIcons = {
-    arxiv: "<svg class=\"pill-icon\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M4.5 2A2.5 2.5 0 0 0 2 4.5v15A2.5 2.5 0 0 0 4.5 22h15a2.5 2.5 0 0 0 2.5-2.5v-15A2.5 2.5 0 0 0 19.5 2h-15ZM6 17l3.2-4.8L6 7.5h2l2.1 3.1L12.2 7.5h2L11 12.2 14.2 17h-2l-2.2-3.3L7.9 17H6Z\"/></svg>",
+    arxiv: "<i class=\"ai ai-arxiv pill-icon-ai\"></i>",
     code: "<i class=\"fab fa-github pill-icon-fa\"></i>",
-    poster: "<i class=\"fas fa-easel pill-icon-fa\"></i>"
+    poster: "<i class=\"fas fa-file-image pill-icon-fa\"></i>"
   };
 
   Q("#pubList").innerHTML = pubs.map(function(pub) {
@@ -183,11 +183,13 @@ function createPosterModal() {
   modal.innerHTML =
     "<div class=\"poster-overlay\"></div>" +
     "<div class=\"poster-container\">" +
-      "<button class=\"poster-close\" aria-label=\"Close\">" +
-        "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\">" +
-          "<path d=\"M11 3L3 11M3 3l8 8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>" +
-        "</svg>" +
-      "</button>" +
+      "<div class=\"poster-topbar\">" +
+        "<button class=\"poster-close\" aria-label=\"Close\">" +
+          "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\">" +
+            "<path d=\"M11 3L3 11M3 3l8 8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>" +
+          "</svg>" +
+        "</button>" +
+      "</div>" +
       "<div class=\"poster-body\">" +
         "<iframe id=\"posterFrame\" class=\"poster-frame\"></iframe>" +
       "</div>" +

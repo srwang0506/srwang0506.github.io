@@ -600,28 +600,15 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
   gap: 5px;
 }
 
-.pill-icon {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-  vertical-align: middle;
-}
-
-.pill-icon-fa {
-  font-size: 0.9em;
-  flex-shrink: 0;
-}
-
-/* ===== PILL LINK ICONS ===== */
-.pill-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
 .pill-icon-fa {
   font-size: 0.95em;
   flex-shrink: 0;
+}
+
+.pill-icon-ai {
+  font-size: 1.15em;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
 
 /* ===== POSTER PREVIEW MODAL ===== */
@@ -658,6 +645,8 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   transform: scale(0.92) translateY(20px);
   transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
@@ -669,13 +658,19 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
   transform: scale(1) translateY(0);
 }
 
+.poster-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 14px;
+  flex-shrink: 0;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
 .poster-close {
-  position: absolute;
-  top: 10px;
-  right: 52px;
-  z-index: 10;
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border: none;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.45);
@@ -687,18 +682,20 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
   transition: all 0.25s ease;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
 .poster-close:hover {
   background: rgba(0, 0, 0, 0.7);
-  transform: scale(1.12);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.18);
 }
 
 .poster-body {
-  width: 100%;
-  height: 100%;
+  flex: 1;
+  overflow: hidden;
 }
 
 .poster-frame {
@@ -709,19 +706,3 @@ body { font-family: var(--font-body); font-size: 1rem; color: var(--text-main); 
 }
 
 /* Responsive */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
