@@ -25,7 +25,7 @@
   {
     title: "Lightweight Speech Enhancement with State-Space Model and Depthwise Separable Convolution",
     authors: "Chen Jiang†, Dai Gao†, <strong>Sirui Wang</strong>, Chengxuan Zou, Jie Liu*",
-    venue: "JCR Q2, Digital Signal Processing, 2026",
+    venue: "Digital Signal Processing, 2026",
     year: "2025",
     image: "img/publications/DSP.jpg"
   }

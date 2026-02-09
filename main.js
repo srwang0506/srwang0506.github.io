@@ -120,6 +120,14 @@ function initNavigation() {
     });
   }
 
+  // Auto-update footer date
+  var now = new Date();
+  var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var footerUpdate = Q(".footer-update");
+  if (footerUpdate) {
+    footerUpdate.textContent = "Last updated: " + months[now.getMonth()] + " " + now.getFullYear();
+  }
+
   window.addEventListener("scroll", updateActiveNav);
   updateActiveNav();
 
