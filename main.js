@@ -183,13 +183,11 @@ function createPosterModal() {
   modal.innerHTML =
     "<div class=\"poster-overlay\"></div>" +
     "<div class=\"poster-container\">" +
-      "<div class=\"poster-header\">" +
-        "<button class=\"poster-close\" aria-label=\"Close\">" +
-          "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\">" +
-            "<path d=\"M11 3L3 11M3 3l8 8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>" +
-          "</svg>" +
-        "</button>" +
-      "</div>" +
+      "<button class=\"poster-close\" aria-label=\"Close\">" +
+        "<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\">" +
+          "<path d=\"M11 3L3 11M3 3l8 8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>" +
+        "</svg>" +
+      "</button>" +
       "<div class=\"poster-body\">" +
         "<iframe id=\"posterFrame\" class=\"poster-frame\"></iframe>" +
       "</div>" +
