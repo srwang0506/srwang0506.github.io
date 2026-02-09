@@ -139,7 +139,12 @@ function initNavigation() {
 function renderPubs(pubs) {
   Q("#pubList").innerHTML = pubs.map(function(pub) {
     var linksHtml = pub.links
-      ? Object.entries(pub.links).map(function(entry) { return "<a href=\"" + entry[1] + "\" class=\"pill-link\" target=\"_blank\">" + entry[0] + "</a>"; }).join("")
+      ? Object.entries(pub.links).map(function(entry) {
+          if (entry[0] === "poster") {
+            return "<a href=\"javascript:void(0)\" class=\"pill-link poster-link\" data-poster=\"" + entry[1] + "\"><i class=\"fas fa-image\" style=\"margin-right:4px;font-size:0.85em\"></i>" + entry[0] + "</a>";
+          }
+          return "<a href=\"" + entry[1] + "\" class=\"pill-link\" target=\"_blank\">" + entry[0] + "</a>";
+        }).join("")
       : "";
     
     var imageHtml = pub.image 
@@ -148,6 +153,70 @@ function renderPubs(pubs) {
     
     return "<article class=\"pub-item\">" + imageHtml + "<div class=\"pub-content\"><h3 class=\"pub-title\">" + pub.title + "</h3><div class=\"pub-authors\">" + pub.authors + "</div><div class=\"pub-meta\"><span class=\"venue-badge\">" + pub.venue + "</span></div>" + (linksHtml ? "<div class=\"pub-links\">" + linksHtml + "</div>" : "") + "</div></article>";
   }).join("");
+
+  // Bind poster click events
+  QQ(".poster-link").forEach(function(link) {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      openPosterPreview(link.getAttribute("data-poster"));
+    });
+  });
+}
+
+/* ===== POSTER PREVIEW MODAL ===== */
+function createPosterModal() {
+  if (Q("#posterModal")) return;
+
+  var modal = document.createElement("div");
+  modal.id = "posterModal";
+  modal.className = "poster-modal";
+  modal.innerHTML =
+    "<div class=\"poster-overlay\"></div>" +
+    "<div class=\"poster-container\">" +
+      "<button class=\"poster-close\" aria-label=\"Close\">" +
+        "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\">" +
+          "<path d=\"M12 4L4 12M4 4l8 8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/>" +
+        "</svg>" +
+      "</button>" +
+      "<div class=\"poster-body\">" +
+        "<iframe id=\"posterFrame\" class=\"poster-frame\"></iframe>" +
+      "</div>" +
+    "</div>";
+
+  document.body.appendChild(modal);
+
+  // Close events
+  modal.querySelector(".poster-overlay").addEventListener("click", closePosterPreview);
+  modal.querySelector(".poster-close").addEventListener("click", closePosterPreview);
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") closePosterPreview();
+  });
+}
+
+function openPosterPreview(src) {
+  createPosterModal();
+  var modal = Q("#posterModal");
+  var frame = Q("#posterFrame");
+  frame.src = src;
+  // Trigger reflow then add active class for animation
+  modal.style.display = "flex";
+  requestAnimationFrame(function() {
+    requestAnimationFrame(function() {
+      modal.classList.add("active");
+    });
+  });
+  document.body.style.overflow = "hidden";
+}
+
+function closePosterPreview() {
+  var modal = Q("#posterModal");
+  if (!modal) return;
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+  setTimeout(function() {
+    modal.style.display = "none";
+    Q("#posterFrame").src = "";
+  }, 350);
 }
 
 init();

@@ -18,7 +18,8 @@
     image: "img/publications/CaTFormer.jpg",
     links: { 
       arxiv: "https://arxiv.org/abs/2507.13425",
-      code: "https://github.com/srwang0506/CaTFormer"
+      code: "https://github.com/srwang0506/CaTFormer",
+      poster: "img/publications/CaTFormer-poster.pdf"
     }
   },
   {
