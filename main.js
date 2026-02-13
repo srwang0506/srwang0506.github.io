@@ -147,7 +147,7 @@ function initNavigation() {
 function renderPubs(pubs) {
   // Icon map for link types
   var linkIcons = {
-    arxiv: "<i class=\"ai ai-arxiv pill-icon-ai\"></i>",
+    paper: "<i class=\"fas fa-file-lines pill-icon-fa\"></i>",
     code: "<i class=\"fab fa-github pill-icon-fa\"></i>",
     poster: "<i class=\"fas fa-file-image pill-icon-fa\"></i>"
   };

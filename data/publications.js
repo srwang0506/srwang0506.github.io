@@ -6,7 +6,7 @@
     year: "2025",
     image: "img/publications/Open4DHOI.jpg",
     links: { 
-      arxiv: "https://arxiv.org/abs/2512.00960",
+      paper: "https://arxiv.org/abs/2512.00960",
       code: "https://github.com/wenboran2002/open4dhoi_code"
     }
   },
@@ -17,7 +17,7 @@
     year: "2025",
     image: "img/publications/CaTFormer.jpg",
     links: { 
-      arxiv: "https://arxiv.org/abs/2507.13425",
+      paper: "https://arxiv.org/abs/2507.13425",
       code: "https://github.com/srwang0506/CaTFormer",
       poster: "img/publications/CaTFormer-poster.pdf"
     }
@@ -27,6 +27,9 @@
     authors: "Chen Jiang†, Dai Gao†, <strong>Sirui Wang</strong>, Chengxuan Zou, Jie Liu*",
     venue: "Digital Signal Processing, 2026",
     year: "2025",
-    image: "img/publications/DSP.jpg"
+    image: "img/publications/DSP.jpg",
+    links: { 
+      paper: "https://doi.org/10.1016/j.dsp.2026.105987"
+    }
   }
 ];
