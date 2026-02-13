@@ -28,7 +28,7 @@
     },
   ],
   about: [
-    `Welcome to my homepage! I'm currently a third-year undergraduate student majoring in <strong>Computer Science and Technology</strong> at <a href="https://www.bjtu.edu.cn/">Beijing Jiaotong University (BJTU)</a>. I'm a diligent and self-motivated learner, driven by curiosity and a desire to solve meaningful problems through my own efforts.`,
+    `Welcome to my homepage! I'm currently a third-year undergraduate student majoring in <strong>Computer Science and Technology</strong> at Beijing Jiaotong University (BJTU). I'm a diligent and self-motivated learner, driven by curiosity and a desire to solve meaningful problems through my own efforts.`,
 
     `My research interests include <strong>Computer Vision, Human-Computer Interaction, Autonomous Driving, and Deepfake Detection</strong>. I hope to contribute to the AI community by creating something valuable and impactful. I'm currently preparing for graduate studies in 2027, aiming to explore these exciting fields in greater depth.`,
 
